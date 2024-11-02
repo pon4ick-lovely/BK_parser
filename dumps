@@ -1,0 +1,61 @@
+b'\x14__time\x01F|IN;TI=20170306133311077;UF=55;|'
+b'\x14EMPTY\x01F|IN;EM=1;TO=15737198M1_1_9;|'
+b'\x14EMPTY\x01F|IN;EM=1;TO=151017012M1_1_9;|'
+b'\x14EMPTY\x01F|IN;EM=1;TO=151014714M1_1_9;|'
+15324853472M1_1_9 [b'U', b'VC=11001;XY=0.65,0.31;']
+15324855102M1_1_9 [b'U', b'XY=0.86,0.16;']
+15324854922M1_1_9 [b'U', b'VC=11000;']
+15324856692M1_1_9 [b'U', b'VC=11000;XY=0.91,0.74;']
+ML62994293C1T1_1_9 [b'U', b'S4=27;']
+ML62937065C1T1_1_9 [b'U', b'S3=81;']
+ML62983477C1T1_1_9 [b'U', b'S4=18;']
+OV1236638969_1_9 [b'U', b'OD=4/1;']
+OV1236638970_1_9 [b'U', b'OD=8/15;']
+15324855102M1_1_9 [b'U', b'XY=0.87,0.00;']
+15324853502M1_1_9 [b'U', b'XY=0.24,0.27;']
+15324855102M1_1_9 [b'U', b'VC=11237;']
+15324856022M1_1_9 [b'U', b'VC=11001;XY=0.56,0.64;']
+ML62988978C1T1_1_9 [b'U', b'S3=3;']
+15324855302M1_1_9 [b'U', b'XY=0.55,0.80;']
+15324853472M1_1_9 [b'U', b'VC=21002;']
+15324854932M1_1_9 [b'U', b'VC=11001;PG=;']
+15324854932M1_1_9 [b'U', b'VC=11000;']
+15324854922M1_1_9 [b'U', b'VC=21002;']
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyboardInterrupt[0m                         Traceback (most recent call last)
+[0;32m/root/b3/test.py[0m in [0;36m<module>[0;34m()[0m
+[1;32m     72[0m [0;32mtry[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m     73[0m     [0mloop[0m [0;34m=[0m [0masyncio[0m[0;34m.[0m[0mget_event_loop[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[0;32m---> 74[0;31m     [0mloop[0m[0;34m.[0m[0mrun_until_complete[0m[0;34m([0m[0mfetch[0m[0;34m([0m[0mloop[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m     75[0m     [0mloop[0m[0;34m.[0m[0mclose[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[1;32m     76[0m [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.5/asyncio/base_events.py[0m in [0;36mrun_until_complete[0;34m(self, future)[0m
+[1;32m    373[0m         [0mfuture[0m[0;34m.[0m[0madd_done_callback[0m[0;34m([0m[0m_run_until_complete_cb[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    374[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 375[0;31m             [0mself[0m[0;34m.[0m[0mrun_forever[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    376[0m         [0;32mexcept[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    377[0m             [0;32mif[0m [0mnew_task[0m [0;32mand[0m [0mfuture[0m[0;34m.[0m[0mdone[0m[0;34m([0m[0;34m)[0m [0;32mand[0m [0;32mnot[0m [0mfuture[0m[0;34m.[0m[0mcancelled[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.5/asyncio/base_events.py[0m in [0;36mrun_forever[0;34m(self)[0m
+[1;32m    343[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    344[0m             [0;32mwhile[0m [0;32mTrue[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 345[0;31m                 [0mself[0m[0;34m.[0m[0m_run_once[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    346[0m                 [0;32mif[0m [0mself[0m[0;34m.[0m[0m_stopping[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    347[0m                     [0;32mbreak[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.5/asyncio/base_events.py[0m in [0;36m_run_once[0;34m(self)[0m
+[1;32m   1274[0m                            timeout * 1e3, dt * 1e3)
+[1;32m   1275[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m-> 1276[0;31m             [0mevent_list[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_selector[0m[0;34m.[0m[0mselect[0m[0;34m([0m[0mtimeout[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m   1277[0m         [0mself[0m[0;34m.[0m[0m_process_events[0m[0;34m([0m[0mevent_list[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m   1278[0m [0;34m[0m[0m
+
+[0;32m/usr/lib/python3.5/selectors.py[0m in [0;36mselect[0;34m(self, timeout)[0m
+[1;32m    439[0m             [0mready[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0m
+[1;32m    440[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 441[0;31m                 [0mfd_event_list[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_epoll[0m[0;34m.[0m[0mpoll[0m[0;34m([0m[0mtimeout[0m[0;34m,[0m [0mmax_ev[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    442[0m             [0;32mexcept[0m [0mInterruptedError[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    443[0m                 [0;32mreturn[0m [0mready[0m[0;34m[0m[0m
+
+[0;31mKeyboardInterrupt[0m: 
